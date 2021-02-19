@@ -1,3 +1,32 @@
 body {
     background: #eeeeee;
 }
+
+.icon.circle {
+    height: 40px;
+    width: 40px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .group {
+      width: 20rem;
+      padding: 25px;
+      display: inline-block;
+      margin: 30px;
+  }
+
+  .group .type {
+    background: #981419;
+    color: #ffffff;
+    padding: 5px;
+    text-align: center;
+    margin: 15px -25px 15px -25px;
+  }
+
+  .badge {
+      color: #606060;
+      background: #eaeaea;
+      margin-right: 5px;
+  }
