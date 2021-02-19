@@ -7,6 +7,7 @@ var data = [];
 
 $(document).ready(function() {
 
+
     $.ajax({
         url: "https://raw.githubusercontent.com/royermatt/compassiongroups/main/groups.json",
         method: "GET",
@@ -27,33 +28,55 @@ $(document).ready(function() {
                 } 
 
                 if(v.full) {
-                    tags += '<div class="full">This group is currently full</div>';
+                    tags += '<span class="full">This group is currently full</span>';
                 }
 
                 var description = v.description;
-                if(description.length > 120) {
-                    description = description.substring(0,120).trim() + "...";
+                if(description.length > 255) {
+                    description = description.substring(0,255).trim() + "...";
+                }
+
+                var image = '';
+                if(v.picture) {
+                    //image = '<img class="card-img-top" src="'+ v.picture +'" alt="Card image cap" />';
+                }
+
+                if(i % 3 === 0) {
+                    //$('#groups').append('<div class="row" data-masonry=\'{"percentPosition": true }\'>');
                 }
 
                 var html = [
-                    '<div class="group card" onclick="openModal('+ i +')">',
-                        '<div class="card-header">',
-                            '<h4 class="card-title">' + v.name + '</h4>',
-                            '<span class="card-subtitle mb-2">' + v.day + ' at ' + v.time + '</span>',
-                        '</div>',
-                        '<div class="card-body">',
-                            '<div class="type">' + v.type + '</div>',
-                            '<div class="card-text">',
-                                '<p class="coach">Leader: ' + v.leader + '</p>',
-                                '<p class="description">' + description + '</p>',
+                        '<div class="group card'+ ((v.full) ? ' full' : '') +'" onclick="openModal('+ i +')">',
+                            image,
+                            '<div class="card-header">',
+                                '<h4 class="card-title">' + v.name + '</h4>',
+                                '<span class="card-subtitle mb-2">' + v.day + ' at ' + v.time + '</span>',
                             '</div>',
-                            tags,
-                        '</div>',
-                    '</div>'
+                            '<div class="card-body">',
+                                '<div class="type">' + v.type + '</div>',
+                                '<div class="card-text">',
+                                    '<p class="coach">Leader: ' + v.leader + '</p>',
+                                    '<p class="description">' + description + '</p>',
+                                '</div>',
+                                tags,
+                            '</div>',
+                        '</div>'
                 ];
 
                 $('#groups').append(html.join(''));
+
+                //msnry.masonry( 'appended', $(html.join('')) );
+                
+                if(i % 3 === 1) {
+                    //$('#groups').append('</div>');
+                }
             });
+
+            $('#groups').masonry({
+                itemSelector: '.group',
+                percentPosition: true
+              })
+
         }
     });
 });
@@ -88,7 +111,7 @@ var openModal = function(index) {
     $("#modal .modal-body").html(html.join(''));
 
     if(item.full) {
-        $("#modal .modal-footer").html('<div class="full">This group is currently full</div>');
+        $("#modal .modal-footer").html('<span class="full">This group is currently full</span>');
     } else {
         $("#modal .modal-footer").html('<button class="btn" onclick="showRegisterForm()">Join this group</button>');
     }
