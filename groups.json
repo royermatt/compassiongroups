@@ -1,7 +1,48 @@
 {
-    "Name": "Family Group",
-    "Campus": "Statesboro",
-    "Online": false,
-    "InPerson": true,
-    "Coach": "Matt"
+    "data": [{
+        "name": "Family Group",
+        "description": "This is a sample group description to show you what it would look like when there is real data.",
+        "type": "Young Adults",
+        "occurance": "Weekly",
+        "day": "Sunday",
+        "time": "19:30",
+        "campus": "Statesboro",
+        "location": "Statesboro, GA",
+        "online": false,
+        "meets": true,
+        "childcare": false,
+        "coach": "Matt",
+        "icon": "default",
+        "picture": null
+    }, {
+        "name": "Family Group B",
+        "description": "This is a sample group description to show you what it would look like when there is real data.",
+        "type": "Young Adults",
+        "occurance": "Weekly",
+        "day": "Sunday",
+        "time": "19:30",
+        "campus": "Statesboro",
+        "location": "Statesboro, GA",
+        "online": false,
+        "meets": true,
+        "childcare": false,
+        "coach": "Matt",
+        "icon": "default",
+        "picture": null
+    }, {
+        "name": "Family Group C",
+        "description": "This is a sample group description to show you what it would look like when there is real data.",
+        "type": "Young Adults",
+        "occurance": "Weekly",
+        "day": "Sunday",
+        "time": "19:30",
+        "campus": "Statesboro",
+        "location": "Statesboro, GA",
+        "online": false,
+        "meets": true,
+        "childcare": false,
+        "coach": "Matt",
+        "icon": "default",
+        "picture": null
+    }]
 }
