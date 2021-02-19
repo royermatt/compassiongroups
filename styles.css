@@ -2,14 +2,12 @@ body {
     background: #efefef;
 }
 
-.btn,
-button {
+.btn {
     background: rgba(152, 20, 25, 0.8);
     color: rgba(255,255,255,1);
 }
 
-.btn:hover,
-button:hover {
+.btn:hover {
     background: rgba(152, 20, 25, 1);
     color: rgba(255,255,255,1);
 }
@@ -27,6 +25,10 @@ button:hover {
       display: inline-block;
       margin: 30px;
       vertical-align: top;
+  }
+
+  .group:hover {
+      cursor: pointer;
   }
 
   .group .card-header {
