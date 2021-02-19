@@ -13,7 +13,7 @@
         "leader": "Pat",
         "icon": "default",
         "picture": "https://ccv.church/GetImage.ashx?guid=e0cb0d52-e4e6-4689-8201-ba41bc54ba3b&width=240",
-        "full": false
+        "full": true
     }, {
         "name": "Family Group",
         "description": "We're a small group that would like to get to know other people and grow together in God's word.",
@@ -54,7 +54,7 @@
         "campus": "Statesboro",
         "location": "Statesboro, GA",
         "online": false,
-        "childcare": false,
+        "childcare": true,
         "leader": "Michele",
         "icon": "default",
         "picture": null,
@@ -69,7 +69,7 @@
         "campus": "Henderson",
         "location": "Savannah, GA",
         "online": false,
-        "childcare": true,
+        "childcare": false,
         "leader": "Jessica",
         "icon": "default",
         "picture": null,
