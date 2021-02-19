@@ -2,6 +2,18 @@ body {
     background: #eeeeee;
 }
 
+.btn,
+button {
+    background: rgba(152, 20, 25, 0.8);
+    color: rgba(255,255,255,1);
+}
+
+.btn:hover,
+button:hover {
+    background: rgba(152, 20, 25, 1);
+    color: rgba(255,255,255,1);
+}
+
 .icon.circle {
     height: 40px;
     width: 40px;
@@ -12,18 +24,36 @@ body {
 
   .group {
       width: 20rem;
-      padding: 25px;
       display: inline-block;
       margin: 30px;
       vertical-align: top;
   }
 
-  .group .type {
-    background: rgba(152, 20, 25, 0.9);
+  .group .card-header {
+    background: rgba(152, 20, 25, 01);
     color: #ffffff;
-    padding: 5px;
+  }
+
+  .group .card-header .card-title {
+      margin-bottom: 0;
+  }
+
+  .group .card-header .card-subtitle {
+      color: #d0d0d0;
+      font-size: 0.9em;
+  }
+
+  .group .card-body {
+      padding: 0 25px 25px 25px;
+  }
+
+  .group .type {
+    background: #dfdfdf;
+    font-size: 0.9em;
+    color: #555;
+    padding: 7px 5px;
     text-align: center;
-    margin: 15px -25px 15px -25px;
+    margin: 0 -25px 25px -25px;
   }
 
     .group .full {
@@ -38,12 +68,6 @@ body {
         display: inline-block;
         float: right;
         margin-top: 15px;
-        background: rgba(152, 20, 25, 0.8);
-        color: rgba(255,255,255,1);
-    }
-    .group button:hover {
-        background: rgba(152, 20, 25, 1);
-        color: rgba(255,255,255,1);
     }
 
   .badge {

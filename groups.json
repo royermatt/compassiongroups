@@ -10,9 +10,9 @@
         "location": "Savannah, GA",
         "online": false,
         "childcare": false,
-        "coach": "Pat",
+        "leader": "Pat",
         "icon": "default",
-        "picture": null,
+        "picture": "https://ccv.church/GetImage.ashx?guid=e0cb0d52-e4e6-4689-8201-ba41bc54ba3b&width=240",
         "full": false
     }, {
         "name": "Family Group",
@@ -25,7 +25,7 @@
         "location": "Statesboro, GA",
         "online": false,
         "childcare": true,
-        "coach": "Andy",
+        "leader": "Andy",
         "icon": "default",
         "picture": null,
         "full": false
@@ -40,9 +40,9 @@
         "location": "Statesboro, GA",
         "online": true,
         "childcare": false,
-        "coach": "Ryan",
+        "leader": "Ryan",
         "icon": "default",
-        "picture": null,
+        "picture": "https://ccv.church/GetImage.ashx?guid=8936d001-7f90-47f8-bd9c-4982ecdf2633&width=240",
         "full": true
     }]
 }
