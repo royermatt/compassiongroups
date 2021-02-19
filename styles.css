@@ -1,5 +1,5 @@
 body {
-    background: #eeeeee;
+    background: #efefef;
 }
 
 .btn,
@@ -30,11 +30,8 @@ button:hover {
   }
 
   .group .card-header {
-    
-    /*background: rgba(152, 20, 25, 01);
+    background: rgba(152, 20, 25, 01);
     color: #ffffff;
-    */
-    background: #fff;
   }
 
   .group .card-header .card-title {
@@ -42,8 +39,7 @@ button:hover {
   }
 
   .group .card-header .card-subtitle {
-    /*  color: #d0d0d0;*/
-    color: #777777;
+    color: #d0d0d0;
       font-size: 0.9em;
   }
 
@@ -53,10 +49,8 @@ button:hover {
 
   .group .type {
     background: #dfdfdf;
-    background: rgba(152, 20, 25, 01);
     font-size: 0.9em;
     color: #555;
-    color:#fff;
     padding: 7px 5px;
     text-align: center;
     margin: 0 -25px 25px -25px;
