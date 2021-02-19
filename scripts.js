@@ -10,7 +10,7 @@ var campusCity = [0, 0, 2, 0, 3, 1, 0];
 
 var translateData = function(data) {
     var newData = [];
-    var randomItems = [295,291,214,191,272,57,168,128,595,565,19,382,108,555,374,433,250,13,209,220,18,137,230,585,548,331,129,274,16,102,314,572,176,232,536,159,452,404,256,357,266,352,494,508,471,2,75,178,88,490];
+    var randomItems = [8,253,251,282,206,75,449,505,577,587,279,96,452,543,553,111,384,106,360,560,520,315,373,252,408,165,299,275,437,168,518,313,43,195,499,122,435,306,127,151,82,356,239,78,256,444,528,501,407,392];
 
     $.each(data, function(i,d) {
         if(randomItems.includes(i)) {
@@ -73,7 +73,7 @@ $(document).ready(function() {
 
                 var image = '';
                 if(v.picture) {
-                    //image = '<img class="card-img-top" src="'+ v.picture +'" alt="Card image cap" />';
+                    image = '<img class="card-img-top" src="'+ v.picture +'" alt="Card image cap" />';
                 }
 
                 if(i % 3 === 0) {
@@ -107,10 +107,16 @@ $(document).ready(function() {
                 }
             });
 
-            $('#groups').masonry({
+            var $grid = $('#groups').masonry({
                 itemSelector: '.group',
-                percentPosition: true
-              })
+                percentPosition: true,
+                fitWidth: true,
+                gutter: 40
+              });
+
+              $grid.imagesLoaded().progress( function() {
+                $grid.masonry('layout');
+              });
 
         }
     });

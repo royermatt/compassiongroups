@@ -20,9 +20,17 @@ body {
     display: inline-block;
   }
 
+  #wrapper { 
+    max-width: 1528px;
+    margin: 40px auto 0 auto;
+    }
+  #groups { 
+      margin: 0 auto;
+  }
+
   .group {
       width: 22rem;
-      margin: 20px;
+      margin-bottom: 40px;
       vertical-align: top;
   }
 
