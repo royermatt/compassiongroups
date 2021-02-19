@@ -19,20 +19,29 @@
                     
                     if(v.childcare) {
                         tags += '<span class="badge">Childcare</span>';
+                    } 
+
+                    if(v.full) {
+                        tags += '<div class="full">This group is currently full</div>';
                     } else {
-                        tags += '<span class="badge">No childcare</span>';
+                        tags += '<button type="button" class="btn btn-sm">Join group</button>'
+                    }
+
+                    var description = v.description;
+                    if(description.length > 120) {
+                        description = description.substring(0,120).trim() + "...";
                     }
 
                     var html = [
                         '<div class="group card">',
                             '<div class="card-body>',
                                 '<span class="icon circle"></span>',
-                                '<h3 class="card-title">' + v.name + '</h3>',
-                                '<p class="card-subtitle mb-2 text-muted">' + v.day + ', ' + v.time + '</p>',
+                                '<h4 class="card-title">' + v.name + '</h4>',
+                                '<p class="card-subtitle mb-2 text-muted">' + v.day + ' at ' + v.time + '</p>',
                                 '<div class="type">' + v.type + '</div>',
                                 '<div class="card-text">',
                                     '<p class="coach">Coach: ' + v.coach + '</p>',
-                                    '<p class="description">' + v.description + '</p>',
+                                    '<p class="description">' + description + '</p>',
                                 '</div>',
                                 tags,
                             '</div>',
