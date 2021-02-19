@@ -4,16 +4,51 @@ var modal = new bootstrap.Modal(document.getElementById('modal'), {
 
 var data = [];
 
+var cities = ["Savannah", "Statesboro", "Rincon", "Midway"];
+var campuses = ["Henderson", "Downtown", "Effingham", "East", "Midway", "Statesboro", "Latino"];
+var campusCity = [0, 0, 2, 0, 3, 1, 0];
+
+var translateData = function(data) {
+    var newData = [];
+    var randomItems = [295,291,214,191,272,57,168,128,595,565,19,382,108,555,374,433,250,13,209,220,18,137,230,585,548,331,129,274,16,102,314,572,176,232,536,159,452,404,256,357,266,352,494,508,471,2,75,178,88,490];
+
+    $.each(data, function(i,d) {
+        if(randomItems.includes(i)) {
+            var random = Math.floor(Math.random() * 7);
+            newData.push({        
+                "id": d.Id,
+                "name": d.Name,
+                "description": d.Description,
+                "type": d.CCVGroupType,
+                "audience": d.CCVGroupAudience,
+                "occurance": "Weekly",
+                "day": d.DayOfWeek,
+                "time": d.TimeOfDay,
+                "campus": campuses[random],
+                "city": cities[campusCity[random]],
+                "state": "GA",
+                "online": d.OnlineGroup,
+                "childcare": d.Childcare,
+                "leader": d.CoachFirstName + " " + d.CoachLastName,
+                "icon": "default",
+                "picture": (d.FamilyPicture) ? "https://ccv.church/GetImage.ashx?guid=" + d.FamilyPicture +"&width=4=600" : null,
+                "full": d.AtCapacity
+            });
+        }
+    });
+
+    return newData;
+};
 
 $(document).ready(function() {
 
 
     $.ajax({
-        url: "https://raw.githubusercontent.com/royermatt/compassiongroups/main/groups.json",
+        url: "https://raw.githubusercontent.com/royermatt/compassiongroups/main/ccv.json",
         method: "GET",
         success: function(r) {
             var json = JSON.parse(r);
-            data = json.data || [];
+            data = translateData(json.Data) || [];
 
             $.each(data, function(i, v) {
 
@@ -53,7 +88,7 @@ $(document).ready(function() {
                                 '<span class="card-subtitle mb-2">' + v.day + ' at ' + v.time + '</span>',
                             '</div>',
                             '<div class="card-body">',
-                                '<div class="type">' + v.type + '</div>',
+                                '<div class="type">' + v.audience + '</div>',
                                 '<div class="card-text">',
                                     '<p class="coach">Leader: ' + v.leader + '</p>',
                                     '<p class="description">' + description + '</p>',
@@ -99,7 +134,7 @@ var openModal = function(index) {
         '</p>',
         '<p>',
             '<strong>Location</strong><br />',
-            '<span>' + item.location + '</span>',
+            '<span>' + item.city + ', ' + item.state + '</span>',
         '</p>'
     ];
 

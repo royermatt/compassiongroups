@@ -21,7 +21,7 @@ body {
   }
 
   .group {
-      max-width: 22rem;
+      width: 22rem;
       margin: 20px;
       vertical-align: top;
   }
@@ -87,6 +87,6 @@ body {
 
   @media only screen and (max-width: 500px) {
     .group {
-        max-width: 100%;
+        width: 100%;
     }
   }
