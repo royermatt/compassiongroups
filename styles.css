@@ -85,4 +85,8 @@ body {
       margin-right: 5px;
   }
 
-  */
+  @media only screen and (max-width: 500px) {
+    .group {
+        max-width: 100%;
+    }
+  }
