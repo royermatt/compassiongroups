@@ -30,8 +30,11 @@ button:hover {
   }
 
   .group .card-header {
-    background: rgba(152, 20, 25, 01);
+    
+    /*background: rgba(152, 20, 25, 01);
     color: #ffffff;
+    */
+    background: #fff;
   }
 
   .group .card-header .card-title {
@@ -39,7 +42,8 @@ button:hover {
   }
 
   .group .card-header .card-subtitle {
-      color: #d0d0d0;
+    /*  color: #d0d0d0;*/
+    color: #777777;
       font-size: 0.9em;
   }
 
@@ -49,29 +53,35 @@ button:hover {
 
   .group .type {
     background: #dfdfdf;
+    background: rgba(152, 20, 25, 01);
     font-size: 0.9em;
     color: #555;
+    color:#fff;
     padding: 7px 5px;
     text-align: center;
     margin: 0 -25px 25px -25px;
   }
 
-    .group .full {
-        font-size: 0.8em;
-        text-align: center;
-        margin-top: 25px;
-        color: red;
-        font-weight: bold;
-    }
+  .full {
+    display: block;
+    font-size: 0.8em;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+.group .full {
+    margin-top: 25px;
+}
 
-    .group button {
-        display: inline-block;
-        float: right;
-        margin-top: 15px;
-    }
+.modal-title {
+    font-weight: 400;
+    font-size: 1em;
+}
 
   .badge {
       color: #606060;
       background: #eaeaea;
       margin-right: 5px;
   }
+
+  

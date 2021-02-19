@@ -64,6 +64,7 @@ var openModal = function(index) {
 
     var html = [
         '<h3>' + item.name + '</h3>',
+        '<p>' + item.day + ' at ' + item.time + '</p>',
         '<p>' + item.description + '</p>',
         '<p>',
             '<strong>Campus</strong><br />',
@@ -79,18 +80,26 @@ var openModal = function(index) {
         '</p>'
     ];
 
+    if($("#modal .modal-footer").length === 0) {
+        $("#modal .modal-content").append('<div class="modal-footer"></div>');
+    }
+
+    $("#modal .modal-title").html(item.name);    
     $("#modal .modal-body").html(html.join(''));
 
-    if($("#modal .modal-footer").length === 0) {  
-        $("#modal .modal-content").append('<div class="modal-footer"><button class="btn" onclick="showRegisterForm()">Join this group</button></div>');
+    if(item.full) {
+        $("#modal .modal-footer").html('<div class="full">This group is currently full</div>');
+    } else {
+        $("#modal .modal-footer").html('<button class="btn" onclick="showRegisterForm()">Join this group</button>');
     }
+    
     modal.show();
 };
 
 var showRegisterForm = function() {
     var html = [    
         '<h5>Join this group</h5>',
-        '<p>Are you interested in joining this group? Use the form below to send an email to the group leader.</p>',
+        '<p>We are glad that you are interested in joining this group! Use the form below to send an email to the group leader. They will be in touch with you soon.</p>',
         '<form style="margin-top:15px;">',
         '<div class="mb-3 row">',
             '<label for="" class="form-label">Name</label>',

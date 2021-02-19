@@ -2,7 +2,7 @@
     "data": [{
         "name": "Young Men's Group",
         "description": "This group exists for Young Men to bring their stories to be heard and invested in. It is a safe and confidential place to share experiences, and gain insights in order to better navigate the world through growth in faith.",
-        "type": "Men",
+        "type": "Mens",
         "occurance": "Weekly",
         "day": "Sunday",
         "time": "6:00 AM",
@@ -44,5 +44,35 @@
         "icon": "default",
         "picture": "https://ccv.church/GetImage.ashx?guid=8936d001-7f90-47f8-bd9c-4982ecdf2633&width=240",
         "full": true
+    }, {
+        "name": "Monday Night Womens Group",
+        "description": "The last six months have been extraordinary! Our group has grown as well as our knowledge of Scripture and our personal relationship with Jesus. We have enjoyed three amazing books. Love Like That, taught us to love like Jesus. Get Out of Your Head helped us learn to take negative thoughts captive, quit spiraling down, and tooled us to spiral up. If taught us we can live and be amazed enjoying the what if dreams & tasks God has purposed for us. Beginning January 5th we will begin a new study, Celebrating Jesus In The Biblical Feast. The Feasts of the Lord have powerful and prophetic significance to all of us. Each Feast is a picture of Jesus the Messiah and represents one of the seven phases of spiritual development in your life. I can’t express how excited I am to study this with you!",
+        "type": "Women",
+        "occurance": "Weekly",
+        "day": "Monday",
+        "time": "6:30 PM",
+        "campus": "Statesboro",
+        "location": "Statesboro, GA",
+        "online": false,
+        "childcare": false,
+        "leader": "Michele",
+        "icon": "default",
+        "picture": null,
+        "full": false
+    }, {
+        "name": "Discipleship Group",
+        "description": "The Peacemaker a biblical guide to solving conflict",
+        "type": "Everyone",
+        "occurance": "Weekly",
+        "day": "Tuesday",
+        "time": "12:00 PM",
+        "campus": "Henderson",
+        "location": "Savannah, GA",
+        "online": false,
+        "childcare": true,
+        "leader": "Jessica",
+        "icon": "default",
+        "picture": null,
+        "full": false
     }]
 }
