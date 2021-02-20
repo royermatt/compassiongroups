@@ -44,7 +44,7 @@ $(document).ready(function() {
 
 
     $.ajax({
-        url: "https://raw.githubusercontent.com/royermatt/compassiongroups/main/ccv.json",
+        url: "https://raw.githubusercontent.com/royermatt/compassiongroups/main/data/ccv.json",
         method: "GET",
         success: function(r) {
             var json = JSON.parse(r);
