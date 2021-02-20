@@ -1,0 +1,107 @@
+body {
+    background: #efefef;
+}
+
+.btn {
+    background: rgba(152, 20, 25, 0.8);
+    color: rgba(255,255,255,1);
+}
+
+.btn:hover {
+    background: rgba(152, 20, 25, 1);
+    color: rgba(255,255,255,1);
+}
+
+.icon.circle {
+    height: 40px;
+    width: 40px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  #wrapper { 
+    max-width: 1528px;
+    margin: 40px auto 0 auto;
+    }
+  #groups { 
+      margin: 0 auto;
+  }
+
+  .group {
+      width: 22rem;
+      margin-bottom: 40px;
+      vertical-align: top;
+  }
+
+  .group.full {
+      opacity: 0.7;
+  }
+
+  .group:hover {
+      cursor: pointer;
+  }
+
+  .group .card-header {
+    background: rgba(152, 20, 25, 01);
+    color: #ffffff;
+  }
+
+  .group .card-header .card-title {
+      margin-bottom: 0;
+  }
+
+  .group .card-header .card-subtitle {
+    color: #d0d0d0;
+      font-size: 0.9em;
+  }
+
+  .group .card-body {
+      padding: 0 25px 25px 25px;
+  }
+
+
+
+  .group .type {
+    background: #f0f0f0;
+    font-size: 0.9em;
+    color: #555;
+    padding: 7px 5px;
+    text-align: center;
+    margin: 0 -25px 25px -25px;
+  }
+
+  span.full {
+    display: block;
+    font-size: 0.8em;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+.group .full {
+    margin-top: 25px;
+}
+
+.modal-title {
+    font-weight: 400;
+    font-size: 1em;
+}
+
+  .badge {
+      color: #606060;
+      background: #eaeaea;
+      margin-right: 5px;
+  }
+
+  @media only screen and (max-width: 800px) {
+    .group {
+        margin: 15px auto;
+        position: initial !important;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    .group {
+        width: calc(100% - 30px);
+    }
+  }
